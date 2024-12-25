@@ -29,6 +29,12 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
+    consumer:
+      group-id: my-consumer-group # Identificador do grupo do consumidor
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest # Opções: earliest, latest, none
+
 
 server:
   port: 8080
